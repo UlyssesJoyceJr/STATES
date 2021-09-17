@@ -1,17 +1,10 @@
 # STATES
 
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 19 22:21:28 2021
-
-@author: jcjoyce
-"""
 
 
 from csv import reader 
-with open('/Users/jcjoyce/Desktop/WMPython/Module5/states.csv', 'r') as ArticleIVSection3Clause1:
+with open('-------', 'r') as ArticleIVSection3Clause1:
     csv_reader = reader(ArticleIVSection3Clause1)
     statesDotes = list(csv_reader)
     for i in range(len(statesDotes)):
@@ -77,14 +70,7 @@ with open('/Users/jcjoyce/Desktop/WMPython/Module5/states.csv', 'r') as ArticleI
                             accum_value = initializer
                             for x in it:
                                 accum_value = function(accum_value, x)
-                                return accum_value
-
-# Above, a file is read in, the data is put into a list - of which, is called statesData, which - contains a sub-list
-# That is, a sub-list for every row of data, with the elements in the order indicated in the referenced table, per module_item_id=80878 
-# Each data element in each sublist, are requested, is represented by the data type indicated in the referenced table, per module_item_id=80878
-
-# Additionally, a built-in function, per docs.python.org - is initiated - of which uses lambda to calculate the sum of the data elements in the requested order
-
+                  
                 SumOfStatePopulation = reduce(lambda x, y: x+y, Population)
                 SumOfStateElectoralVotes = reduce(lambda x, y: x+y, ElectoralVotes)
                 SumOfStateHighwayMiles = reduce(lambda x, y: x+y, HighwayMiles)
